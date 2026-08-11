@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Run a Command') {
+            steps {
+                sh 'date'
+                sh 'ls'
+                sh 'pwd'
+            }
+        }
+        stage('build') {
+            steps {
+                echo 'build'
+            }
+        }
+        stage('Deploy on test') {
+            steps {
+                echo 'Deploy on test1'
+            }
+        }
+        stage('Deploy on prod') {
+            steps {
+                echo 'Deploy on prod1'
+            }
+        }
+    }
+}
